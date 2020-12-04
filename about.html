@@ -4,13 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
+    <style>
+        .prof-table{
+            margin-left: 20px;
+        }
+    </style>
     <title>Document</title>
 </head>
 <body>
     <header>
         <div class="container">
                 <div class="logo_header">
-                    <a href="main.html"><img class="header-logo" 
+                    <a href="index.html"><img class="header-logo" 
                     src="https://u-d-l.jp/wp-content/themes/underline/common/logo.gif" 
                     alt="" width="300px" height="40px"></a>
                 </div>
@@ -30,17 +35,17 @@
     </header>
     <main>
         <div class="container">
-            <h1>About</h1>
+            <h2>About</h2>
             <p>
                 大阪にてフリーランスのWeb制作をしております。<br>
                 2006年よりアルバイトにて制作を始める。<br>
                 2007年から5年間大阪市内の制作会社でデザイン・コーディングなどの業務を行う。<br>
                 2012年よりフリーランスへ転向。<br>
             </p>
-            <div class="prof d-flex">
+            <div class="d-flex">
                 <img src="https://u-d-l.jp/wp-content/themes/underline/about/images/img_face.jpg" 
                 alt="">
-                <table border="1">
+                <table class="prof-table" border="1">
                     <tr>
                         <th>名称：</th>
                         <td>Isumi
@@ -74,7 +79,19 @@
             </div>
         </div>
     </main>
-    
+    <footer>
+        <nav class="nav_footer">
+            <ul class="list_nav_footer d-flex">
+                <li><a href="about.html">About</a></li>
+                <li><a href="works.html">Works</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>            
+        <div class="copy">
+            <p>© Isumi All rights reserved.</p>
+        </div>
+    </footer>
     
 </body>
 </html>
