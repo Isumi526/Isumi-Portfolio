@@ -1,104 +1,120 @@
-*{
-    color: rgb(31, 31, 31);
+* {
+  color: #1f1f1f;
 }
 
-
-a{
-    text-decoration: none;
-    display: inline-block;
+a {
+  text-decoration: none;
+  display: inline-block;
 }
 
-ul{
-    list-style: none;
+ul {
+  list-style: none;
 }
 
-.container{
-    max-width: 1160px;
-    padding: 0 40px;
-    margin: 0 auto;
+.container {
+  max-width: 1160px;
+  padding: 0 40px;
+  margin: 0 auto;
 }
 
-header{
-    width: 100%;
-    height: 150px;
-    padding-top: 100px;
-    
-    
-
+header {
+  width: 100%;
+  height: 150px;
+  padding-top: 100px;
 }
 
-.info_header{
-    position: absolute;
-    top: 112px;
-    right: 100px;
+.info_header {
+  position: absolute;
+  top: 112px;
+  right: 100px;
 }
 
-
-.info_header img{
-    margin-left: 10px;
+.info_header img {
+  margin-left: 10px;
 }
 
-.d-flex{
-    display: flex;
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.info_header img{
-    width: 20px;
-    height: 20px;
+.info_header img {
+  width: 20px;
+  height: 20px;
 }
 
-.list_nav_header{
-    margin: 50px 0 ;
+.list_nav_header {
+  margin: 50px 0;
 }
 
-[class*="nav"] li{
-    margin-right: 50px;
+[class*="nav"] li {
+  margin-right: 50px;
 }
 
-[class*=list_nav]{
-    width: 350px;
-    float: right;
+.nav_header {
+  float: right;
 }
 
-section{
-    margin-top: 80px;
+section {
+  margin-top: 80px;
 }
 
-.cent{
-    text-align: center;
-    flex: auto;
+.cent {
+  text-align: center;
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
 }
 
-h2{
-    text-align: center;
-    letter-spacing: 5px;
-    font-weight: lighter;
-    margin: 30px 0;
+h2 {
+  text-align: center;
+  letter-spacing: 5px;
+  font-weight: lighter;
+  margin: 30px 0;
 }
 
-h4{
-    opacity: 0.7;
-    font-size: medium;
+h4 {
+  opacity: 0.7;
+  font-size: medium;
 }
 
-.imag_s1{
-    width: 98px;
-    height: 102px;
+.imag_s1 {
+  width: 98px;
+  height: 102px;
 }
 
-.contents_skill{
-    padding: 20px;
+.contents_skill {
+  padding: 20px;
 }
 
-.topic_skill{
-    padding: 20px;
+.topic_skill {
+  padding: 20px;
 }
 
-.contents_work{
-    align-items: center;
-    margin: 80px 0;
+.contents_work {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 80px 0;
 }
 
-.list_nav_footer{
-    float: left;
+footer{
+  margin-top: 50px;
 }
+
+.nav_footer {
+  -webkit-box-flex: left;
+      -ms-flex: left;
+          flex: left;
+}
+
+.copy {
+  text-align: end;
+  padding: 30px;
+}
+
+.copy p {
+  font-size: 10px;
+}
+/*# sourceMappingURL=main.css.map */
