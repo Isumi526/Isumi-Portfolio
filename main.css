@@ -1,5 +1,6 @@
 * {
   color: #1f1f1f;
+  
 }
 
 a {
@@ -34,8 +35,6 @@ header {
 }
 
 .d-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -44,17 +43,15 @@ header {
   height: 20px;
 }
 
-.list_nav_header {
+.nav_header{
   margin: 50px 0;
+  justify-content:flex-end;
 }
 
 [class*="nav"] li {
   margin-right: 50px;
 }
 
-.nav_header {
-  float: right;
-}
 
 section {
   margin-top: 80px;
@@ -62,9 +59,7 @@ section {
 
 .cent {
   text-align: center;
-  -webkit-box-flex: 1;
-      -ms-flex: auto;
-          flex: auto;
+  width: 33%;
 }
 
 h2 {
@@ -81,32 +76,25 @@ h4 {
 
 .imag_s1 {
   width: 98px;
-  height: 102px;
 }
 
-.contents_skill {
-  padding: 20px;
+.imag_s2{
+  width: 100%;
 }
 
-.topic_skill {
-  padding: 20px;
+[class*="item"]{
+  padding: 30px;
+  width: 33%;
 }
-
-.contents_work {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 80px 0;
-}
-
-footer{
-  margin-top: 50px;
-}
-
 .nav_footer {
   -webkit-box-flex: left;
       -ms-flex: left;
           flex: left;
+}
+
+.top{
+  text-align: center;
+  margin: 100px 0;
 }
 
 .copy {
@@ -117,4 +105,15 @@ footer{
 .copy p {
   font-size: 10px;
 }
-/*# sourceMappingURL=main.css.map */
+
+@media(max-width:760px){
+  .d-flex{
+    flex-wrap: wrap;
+  }
+  [class*="item"]{
+    width: 100%;
+  }
+  .copy {
+    text-align: center;
+  
+}
