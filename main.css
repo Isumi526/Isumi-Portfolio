@@ -38,17 +38,17 @@ header {
   display: flex;
 }
 
-.info_header img {
+.sns-img {
   width: 20px;
   height: 20px;
 }
 
-.nav_header{
+.navi_header{
   margin: 50px 0;
   justify-content:flex-end;
 }
 
-[class*="nav"] li {
+[class*="navi"] li {
   margin-right: 50px;
 }
 
@@ -86,7 +86,7 @@ h4 {
   padding: 30px;
   width: 33%;
 }
-.nav_footer {
+.navi_footer {
   -webkit-box-flex: left;
       -ms-flex: left;
           flex: left;
@@ -95,6 +95,7 @@ h4 {
 .top{
   text-align: center;
   margin: 100px 0;
+  cursor: pointer;
 }
 
 .copy {
@@ -115,5 +116,12 @@ h4 {
   }
   .copy {
     text-align: center;
+  }
+  [class*="navi"]{
+    display: none;
+  }
+  .info_header{
+    display: none;
+  }
   
 }
