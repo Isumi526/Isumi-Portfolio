@@ -6,6 +6,7 @@
 a {
   text-decoration: none;
   display: inline-block;
+  color: #1f1f1f;
 }
 
 ul {
@@ -72,7 +73,7 @@ h2 {
   text-align: center;
   letter-spacing: 5px;
   font-weight: lighter;
-  margin: 30px 0;
+  margin: 50px 0;
 }
 
 h4 {
