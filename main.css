@@ -27,8 +27,8 @@ header {
 
 .info_header {
   position: absolute;
-  top: 112px;
-  right: 100px;
+  top: 114px;
+  right: 12%;
 }
 
 .info_header img {

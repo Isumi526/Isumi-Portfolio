@@ -1,0 +1,143 @@
+*{
+    text-decoration: none;
+    /* font-weight: normal; */
+    line-height: 30px;
+}
+
+
+li{
+    list-style: none;
+}
+body{
+    margin: 0;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid white;
+    height:74px;
+    padding: 0 120px;
+    color: white;
+    
+}
+
+.header_ttl{
+    line-height:37px;
+    font-weight: normal;
+}
+
+.header_list{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.header_list li{
+    line-height:37px;
+    margin-left: 50px; color: white;
+}
+
+.header_list a{
+    color: white;
+}
+
+.fv{
+    background-image: url(../img/fv-bgi@2x.jpg);
+    background-size: cover;
+    height: 814px;
+    position: relative;
+}
+
+.header_ttl_2{
+    color: white;
+    border: 1px solid white;
+    height: 136px;
+    width: 450px;
+    text-align: center;
+    line-height: 136px;
+    position: absolute;
+    top:40%;
+    left:35% ;
+}
+
+.container{
+    max-width: 1048px;
+    margin: 100px auto 150px auto;
+}
+
+
+
+.about_ttl{
+    text-align: center;  
+     
+}
+
+
+.service_ttl{
+    text-align: center;   
+}
+.service_content{
+    display: flex;
+    margin: 50px 0; 
+}
+
+.service_text{
+    margin-left: 70px;
+}
+.service_text_2{
+    margin-right: 70px;
+}
+
+.news_content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.news_article{
+    /* height: 322px; */
+    width: 320px;
+    border: solid 1px black;
+}
+
+.news_article p{
+    padding: 10px;
+}
+
+.contact_ttl{
+    text-align: center;  
+    margin-bottom: 63px; 
+}
+
+.contact_form{
+    width: 700px;
+    margin: 0 auto;
+}
+
+.contact_text{
+    width: 100%;
+    height:28px;
+    margin-bottom:20px ;
+}
+.contact_form textarea{
+    width: 100%;
+    height:172px;
+}
+.contact_btn{
+    width: 240px;
+    background-color: black;
+    color: white;
+    /* border-radius: 50%; */
+    display: block;
+    margin: 50px auto;
+}
+footer{
+    background-color: black;
+    color: white;
+    height:78px ;
+    text-align: center;
+}
+footer p{
+    line-height: 78px;
+    font-size: 14px;
+}
