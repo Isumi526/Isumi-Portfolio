@@ -1,6 +1,12 @@
-* {
-  color: #1f1f1f;
-  
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP');
+
+*{
+    text-decoration:none;
+    color: inherit;
+    list-style: none;
+    font-weight: normal;
+    font-size:small;
+    font-family: 'Noto Serif JP', sans-serif;
 }
 
 html{
@@ -8,14 +14,9 @@ html{
 }
 
 a {
-  text-decoration: none;
-  display: inline-block;
   color: #1f1f1f;
 }
 
-ul {
-  list-style: none;
-}
 
 .container {
   max-width: 1200px;
@@ -24,6 +25,7 @@ ul {
 header {
   margin-top: 80px;
 }
+
 
 .info_header {
   position: absolute;
@@ -37,6 +39,11 @@ header {
 
 .d-flex {
   display: flex;
+}
+
+.service_area{
+  display: flex;
+  justify-content: center;
 }
 
 .sns-img {
@@ -72,14 +79,14 @@ section {
 
 h2 {
   text-align: center;
-  letter-spacing: 5px;
-  font-weight: lighter;
+  /* letter-spacing: 5px; */
+  /* font-weight: lighter; */
   margin: 50px 0;
 }
 
 h4 {
   opacity: 0.7;
-  font-size: medium;
+  /* font-size: medium; */
 }
 
 .imag_s1 {
@@ -94,6 +101,11 @@ h4 {
   padding: 30px;
   width: 33%;
 }
+
+.item_skill img{
+  margin-bottom: 15px;
+}
+
 .navi_footer {
   -webkit-box-flex: left;
       -ms-flex: left;
@@ -122,6 +134,19 @@ h4 {
 /* .pc{
   margin-top: 10px;
 } */
+.about_area{
+  display: flex;
+  justify-content: center;
+}
+
+.prof-table{
+  margin-left: 20px;
+  align-self: center;
+}
+
+.about_text{
+  text-align: center;
+}
 
 @media(max-width:760px){
   .d-flex{
@@ -150,5 +175,15 @@ h4 {
   }
   .phone{
     display: block;
+  }
+  .service_area{
+    flex-wrap: wrap;
+  }
+
+  .about_area{
+    flex-wrap: wrap;
+  }
+  .about_area img{
+    margin-bottom: 20px;
   }
 }
