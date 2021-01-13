@@ -22,14 +22,9 @@ a {
   max-width: 1200px;
 }
 
-header {
-  margin-top: 80px;
-}
-
-
 .info_header {
   position: absolute;
-  top: 160px;
+  top: 74px;
   right: 12%;
 }
 
@@ -53,7 +48,8 @@ header {
 
 .navi_header{
   margin: 50px 0px;
-  justify-content:flex-end; 
+  justify-content:flex-end;
+  
 }
 
 
