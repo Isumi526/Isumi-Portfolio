@@ -8,20 +8,16 @@
     font-size:16px;
     font-family: 'Noto Serif JP', sans-serif;
 }
-
 html{
   scroll-behavior: smooth;
 }
-
 a {
   color: #1f1f1f;
 }
-
-
-.container {
+.container{
   max-width: 1200px;
+  margin: 0 auto;
 }
-
 header{
   position: sticky;
   top: 0px;
@@ -37,57 +33,42 @@ header{
   top: 74px;
   right: 12%;
 }
-
 .info_header img {
   margin-left: 10px;
 }
-
 .d-flex {
   display: flex;
 }
-
 .service_area{
   display: flex;
   justify-content: space-between;
 }
-
 .service_item{
   flex: auto;
 }
-
 .service_item p{
   line-height: 26px;
 }
-
 .sns-img {
   width: 20px;
   height: 20px;
 }
-
 .navi_header{
   margin: 60px 0px;
 }
-
-
-
 .navi_header li {
   margin-right: 50px;
 }
-
 .phone{
   display: none;
 }
-
-
 section {
   margin-top: 80px;
 }
-
 .cent {
   text-align: center;
   width: 33%;
 }
-
 h2 {
   text-align: center;
   /* letter-spacing: 5px; */
@@ -99,7 +80,6 @@ h4 {
   opacity: 0.7;
   /* font-size: medium; */
 }
-
 .imag_s1 {
   width: 98px;
 }
@@ -109,18 +89,10 @@ h4 {
 }
 
 [class*="item"]{
-  padding: 30px;
-  width: 33%;
+  margin: 0 16px;
 }
-
-.item_skill img{
-  margin-bottom: 15px;
-}
-
-.navi_footer {
-  -webkit-box-flex: left;
-      -ms-flex: left;
-          flex: left;
+.works_area{
+  justify-content: space-between;
 }
 
 .top{
@@ -147,7 +119,7 @@ h4 {
 } */
 .about_area{
   display: flex;
-  justify-content: center;
+  justify-content:space-between;
 }
 
 .about_icon{
@@ -201,6 +173,9 @@ h4 {
   }
   .about_area img{
     margin-bottom: 20px;
+  }
+  .about_area{
+    justify-content:center;
   }
 }
 
