@@ -1,10 +1,3 @@
-<!-- 元サイト
-https://u-d-l.jp/
-わからないことリスト
-・ナビ部分のレスポンシブ
-・一番大きい写真がデカくなりすぎないためには？
-・トップに戻るアニメーション（スクロール？） -->
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -15,208 +8,207 @@ https://u-d-l.jp/
     <title>Document</title>
 </head>
 <body>
-    <!-- ヘッダー -->
-    <header>
-        <div class="container">
-            <div class="header_wrapper">
-                <div class="logo_header">
-                    <a href="index.html"><img class="header-logo" 
-                    src="img/header_logo.png" 
-                    alt="" width="300px" ></a>
-                </div>
-                <!-- sns  -->
-                <!-- <ul class="info_header d-flex">
-                    <li><a href="https://twitter.com/takaharu_isumi"
-                        target=”_blank”>
-                        <img class="sns-img" src="img/twitter.png" 
-                        alt="インスタグラムのアイコンです"></a></li>
-                    <li><a href="https://www.instagram.com/takaharu_isumi/?hl=ja" 
-                        target=”_blank”>
-                        <img class="sns-img" src="img/instagram.png" alt="ツイッターのアイコンです"></a></li>
-                </ul> -->
-                <!-- ナビ -->
-                <ul class="navi_header d-flex">
-                    <li><a class="pc" href="#service">Service</a></li>
-                    <li><a class="pc" href="#works">Works</a></li>
-                    <li><a class="pc" href="#about">About</a></li>
-                    <li><a class="pc" href="#contact">Contact</a></li>
-                    <li><a class="pc" href="https://twitter.com/takaharu_isumi"
-                        target=”_blank”>
-                        <img class="sns-img" src="img/twitter.png" 
-                        alt="インスタグラムのアイコンです"></a></li>
-                    <li><a class="pc" href="https://www.instagram.com/takaharu_isumi/?hl=ja" 
-                        target=”_blank”>
-                        <img class="sns-img" src="img/instagram.png" alt="ツイッターのアイコンです"></a></li>
-                </ul>          
-                <!-- メニューバー -->
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle bg-dark"
-                            type="button" id="dropdownMenu1" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
-                      <img class="w-25" src="img/bar.png" alt="">
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                      <a class="dropdown-item" href="#service">Service</a>
-                      <a class="dropdown-item" href="#works">Works</a>
-                      <a class="dropdown-item" href="#about">About</a>
-                      <a class="dropdown-item" href="#contact">Contact</a>
-                      <a class="dropdown-item" href="https://twitter.com/takaharu_isumi" target="_blank"><img class="sns-img" src="img/twitter.png" 
-                        alt="インスタグラムのアイコンです"></a>
-                      <a class="dropdown-item" href="https://www.instagram.com/takaharu_isumi/?hl=ja" target="_blank"><img class="sns-img" src="img/instagram.png" 
-                        alt="ツイッターのアイコンです"></a>
+    <div id="app">
+        <!-- ヘッダー -->
+        <header>
+            <div class="container">
+                <div class="header_wrapper">
+                    <div class="logo_header">
+                        <a href="index.html"><img class="header-logo" 
+                        src="img/header_logo.png" 
+                        alt="" width="300px" ></a>
                     </div>
-                  </div>
-            </div>
-        </div>
-    </header>
-    <!-- 写真 -->
-    <main>
-        <div class="mv">
-            <img
-            class="pc"
-            src="img/mv.jpeg" 
-            alt="MV画像"
-            width="100%">
-            <img
-            class="phone"
-            src="img/mv_2.jpeg" 
-            alt=""
-            width="100%">
-        </div>
-        <!-- service -->
-        <section id="service">
-            <div class="container">
-                <h2>Service</h2>
-                <div class="service_area">
-                        <div class="cent service_item">
-                            <h3>ディレクション</h3>
-                            <h4>DIRECTION</h4>
-                            <img class="cent imag_s1" src="img/direction.png" alt="">
-                            <p>
-                                お客様の要望をヒアリングし、現状の問題点を洗い出し、効果的なプランを作成いたします。制作ではデザインに入る前の事前の準備が特に重要になります。何が必要で何が必要でないのかを判断し、費用対効果の高いWebサイトを作るための土台を作ります。
-                            </p>
+                    <!-- ナビ -->
+                    <ul class="navi_header d-flex">
+                        <li><a class="pc" href="#service">Service</a></li>
+                        <li><a class="pc" href="#works">Works</a></li>
+                        <li><a class="pc" href="#about">About</a></li>
+                        <li><a class="pc" href="#contact">Contact</a></li>
+                        <li><a class="pc" v-bind:href="twiiterUrl" target=”_blank”><img class="sns-img" src="img/twitter.png" 
+                            alt="インスタグラムのアイコンです"></a></li>
+                        <li><a class="pc" v-bind:href="instagramUrl" 
+                            target=”_blank”>
+                            <img class="sns-img" src="img/instagram.png" alt="ツイッターのアイコンです"></a></li>
+                    </ul>          
+                    <!-- メニューバー -->
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle bg-dark"
+                                type="button" id="dropdownMenu1" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                            <img class="w-25" src="img/bar.png" alt="">
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                          <a class="dropdown-item" href="#service">Service</a>
+                          <a class="dropdown-item" href="#works">Works</a>
+                          <a class="dropdown-item" href="#about">About</a>
+                          <a class="dropdown-item" href="#contact">Contact</a>
+                          <a class="dropdown-item" v-bind:href="twiiterUrl" target="_blank"><img class="sns-img" src="img/twitter.png" 
+                            alt="インスタグラムのアイコンです"></a>
+                          <a class="dropdown-item" v-bind:href="instagramUrl"  target="_blank"><img class="sns-img" src="img/instagram.png" 
+                            alt="ツイッターのアイコンです"></a>
                         </div>
-                        <div class="cent service_item">
-                            <h3>コーディング</h3>
-                            <h4>CODING</h4>
-                            <img class="imag_s1" src="img/cording.png" alt="">
-                            <p>
-                                デザインの意図を理解し、動きや効果を適切に使用することでWebサイトの仕上がりは大きく変わります。スマートフォンサイト、ワードプレスを使用した更新性の高いサイト、Javascriptを使用した動きのあるサイトなど、様々なサイトのコーディングを行っております。
-                            </p>
-                        </div>
-                        <!-- <div class="cent service_item">
-                            <h3>WordPress</h3>
-                            <h4>WordPress</h4>
-                            <img class="imag_s1" src="img/wordpress.png" alt="">
-                            <p>
-                                お客様の要望をヒアリングし、現状の問題点を洗い出し、効果的なプランを作成いたします。制作ではデザインに入る前の事前の準備が特に重要になります。何が必要で何が必要でないのかを判断し、費用対効果の高いWebサイトを作るための土台を作ります。
-                            </p>
-                        </div> -->
-                </div>
-
-            </div>
-        </section>
-        <!-- WORK -->
-        <section id="works">
-            <div class="container">
-                <h2 class="ttl_work">works</h2>
-                <div class="d-flex works_area">
-                        <div class="item_work cent">
-                            <a href="works.html"><img  class="border border-dark imag_s2" 
-                                src="img/work_cresta.jpeg" 
-                                alt="作品へのリンクです"></a>
-                        </div>
-                        <div class="item_work cent">
-                            <a href=".//Quiz/index.html" target="_blank"><img class="border border-dark imag_s2" 
-                                src="img/quiz_image.png" 
-                                alt=""></a>
-                        </div>
-                        <div class="item_work cent">
-                            <a href="#"><img class="imag_s2" 
-                                src="https://u-d-l.jp/wp-content/themes/underline/images/icon_service01.jpg" 
-                                alt=""></a>
-                        </div>
+                      </div>
                 </div>
             </div>
-        </section>
-        <!-- about -->
-        <section id="about">
-            <div class="container">
-                <h2>About</h2>
-                <p class="about_text">
-                    大阪にてフリーランスのWeb制作をしております。<br>
-                    HPやLPの作成など、お気軽にご相談ください<br>
-                </p>
-                <div class="about_area">
-                    <img class="about_icon about_item" src="img/face_icon.png" 
-                    alt=""
-                    width="200px">
-                    <table class="prof-table about_item" border="1">
-                        <tr>
-                            <th>名称：</th>
-                            <td>亥角　貴治【Isumi Takaharu】
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>所在地：</th>
-                            <td>大阪市内</td>
-                        </tr>
-                        
-                        <tr>
-                            <th>事業内容：</th>
-                            <td>Web制作におけるディレクション、コーディング</td>
-                        <tr>
-                        </tr>
-                            <th>お問い合わせ：</th>
-                            <td>ismsn526@gmail.com</td>
-                        </tr>
-                        <tr>
-                            <th>Twitter：</th>
-                            <td><a href="https://twitter.com/takaharu_isumi" target="_blank">takaharu_isumi</a></td>
-                        </tr>
-                        <tr>
-                            <th>Instagram：</th>
-                            <td><a href="https://www.instagram.com/takaharu_isumi/?hl=ja" target="_blank">takaharu_isumi</a> </td>
-                        </tr>
-                    </table>     
+        </header>
+        <!-- 写真 -->
+        <main>
+            <div class="mv">
+                <img
+                class="pc"
+                src="img/mv.jpeg" 
+                alt="MV画像"
+                width="100%">
+                <img
+                class="phone"
+                src="img/mv_2.jpeg" 
+                alt=""
+                width="100%">
             </div>
-        </section>
-        <!-- contact -->
-        <section id="contact">
+            <!-- service -->
+            <section id="service">
+                <div class="container">
+                    <h2>Service</h2>
+                    <div class="service_area">
+                            <div class="cent service_item">
+                                <h3>ディレクション</h3>
+                                <h4>DIRECTION</h4>
+                                <img class="cent imag_s1" src="img/direction.png" alt="">
+                                <p>
+                                    お客様の要望をヒアリングし、現状の問題点を洗い出し、効果的なプランを作成いたします。制作ではデザインに入る前の事前の準備が特に重要になります。何が必要で何が必要でないのかを判断し、費用対効果の高いWebサイトを作るための土台を作ります。
+                                </p>
+                            </div>
+                            <div class="cent service_item">
+                                <h3>コーディング</h3>
+                                <h4>CODING</h4>
+                                <img class="imag_s1" src="img/cording.png" alt="">
+                                <p>
+                                    デザインの意図を理解し、動きや効果を適切に使用することでWebサイトの仕上がりは大きく変わります。スマートフォンサイト、ワードプレスを使用した更新性の高いサイト、Javascriptを使用した動きのあるサイトなど、様々なサイトのコーディングを行っております。
+                                </p>
+                            </div>
+                            <!-- <div class="cent service_item">
+                                <h3>WordPress</h3>
+                                <h4>WordPress</h4>
+                                <img class="imag_s1" src="img/wordpress.png" alt="">
+                                <p>
+                                    お客様の要望をヒアリングし、現状の問題点を洗い出し、効果的なプランを作成いたします。制作ではデザインに入る前の事前の準備が特に重要になります。何が必要で何が必要でないのかを判断し、費用対効果の高いWebサイトを作るための土台を作ります。
+                                </p>
+                            </div> -->
+                    </div>
+    
+                </div>
+            </section>
+            <!-- WORK -->
+            <section id="works">
+                <div class="container">
+                    <h2 class="ttl_work">works</h2>
+                    <div class="d-flex works_area">
+                            <div class="item_work cent">
+                                <a href="works.html"><img  class="border border-dark work_item" 
+                                    src="img/work_cresta.jpeg" 
+                                    alt="作品へのリンクです"></a>
+                            </div>
+                            <div class="item_work cent">
+                                <a href=".//Quiz/index.html" target="_blank"><img class="border border-dark work_item" 
+                                    src="img/quiz_image.png" 
+                                    alt=""></a>
+                            </div>
+                            <div class="item_work cent">
+                                <a href="#"><img class="border border-dark work_item" 
+                                    src="https://u-d-l.jp/wp-content/themes/underline/images/icon_service01.jpg" 
+                                    alt=""></a>
+                            </div>
+                    </div>
+                </div>
+            </section>
+            <!-- about -->
+            <section id="about">
+                <div class="container">
+                    <h2>About</h2>
+                    <p class="about_text">
+                        大阪にてフリーランスのWeb制作をしております。<br>
+                        HPやLPの作成など、お気軽にご相談ください<br>
+                    </p>
+                    <div class="about_area">
+                        <img class="about_icon about_item" src="img/face_icon.png" 
+                        alt="顔アイコンです"
+                        width="250px">
+                        <table class="prof-table about_item" border="1">
+                            <tr>
+                                <th>名称：</th>
+                                <td>亥角　貴治【Isumi Takaharu】
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>所在地：</th>
+                                <td>大阪市内</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>事業内容：</th>
+                                <td>Web制作におけるディレクション、コーディング</td>
+                            <tr>
+                            </tr>
+                                <th>お問い合わせ：</th>
+                                <td>ismsn526＠gmail.com(＠を半角に変えてお送りください。)</td>
+                            </tr>
+                            <tr>
+                                <th>Twitter：</th>
+                                <td><a href="https://twitter.com/takaharu_isumi" target="_blank">takaharu_isumi</a></td>
+                            </tr>
+                            <tr>
+                                <th>Instagram：</th>
+                                <td><a v-bind:href="instagramUrl"  target="_blank">takaharu_isumi</a> </td>
+                            </tr>
+                        </table>     
+                </div>
+            </section>
+            <!-- contact -->
+            <section id="contact">
+                <div class="container">
+                    <h2>Contact</h2>
+                    <p class="contact_text">制作の依頼・ご相談などお気軽にお問い合わせくださいませ。<br>
+                        下記フォームよりわかる範囲でご記入ください。必須の項目は必ずご記入お願いします。</p>
+                    <div class="form">
+                        <label>貴社名<input type="text"></label><br>
+                        <label>お名前<span>必須</span><input type="text"></label><br>
+                        <label>メールアドレス<span>必須</span><input type="text"></label><br>
+                        <label>電話番号<input type="text"></label><br>
+                        <label for="inquiry"><TEXTAREA id="inquiry" placeholder="お問い合わせ内容をご記入ください"></TEXTAREA></label> 
+                    </div>
+                    <div>
+                        <button id="send" type="submit" disabled>内容を送信する</button>
+                    </div>
+                 </div>
+            </section>
+            <p class="top" >
+                <img id="js-top" width="22" height="14" 
+                src="https://u-d-l.jp/wp-content/themes/underline/common/icon_totop.gif" alt="">
+            </p>
+    
+        </main>
+        <!-- フッター -->
+        <footer>
             <div class="container">
-                <h2>Contact</h2>
-                <p class="contact_text">制作の依頼・ご相談などお気軽にお問い合わせくださいませ。<br>
-                    下記フォームよりわかる範囲でご記入ください。必須の項目は必ずご記入お願いします。</p>
-                <div class="form">
-                    <label>貴社名<input type="text"></label><br>
-                    <label>お名前<span>必須</span><input type="text"></label><br>
-                    <label>メールアドレス<span>必須</span><input type="text"></label><br>
-                    <label>電話番号<input type="text"></label><br>
-                    <label for="inquiry"><TEXTAREA id="inquiry" placeholder="お問い合わせ内容をご記入ください"></TEXTAREA></label> 
+                <div class="copy">
+                    <p>© Isumi All rights reserved.</p>
                 </div>
-                <div>
-                    <button id="send" type="submit" disabled>内容を送信する</button>
-                </div>
-             </div>
-        </section>
-        <p class="top" >
-            <img id="js-top" width="22" height="14" 
-            src="https://u-d-l.jp/wp-content/themes/underline/common/icon_totop.gif" alt="">
-        </p>
-
-    </main>
-    <!-- フッター -->
-    <footer>
-        <div class="container">
-            <div class="copy">
-                <p>© Isumi All rights reserved.</p>
             </div>
-        </div>
-    </footer>
-    <script src="js/main.js"></script>
+        </footer>
+    </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el : '#app',
+            data : {
+                twiiterUrl : 'https://twitter.com/takaharu_isumi',
+                instagramUrl : 'https://www.instagram.com/takaharu_isumi/?hl=ja'
+            }
+        })
+    </script>
 </body>   
 </html>
