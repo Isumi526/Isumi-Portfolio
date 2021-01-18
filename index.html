@@ -20,10 +20,10 @@
                     </div>
                     <!-- ナビ -->
                     <ul class="navi_header d-flex">
-                        <li><a class="pc" v-on:click="onclick">Service</a></li>
-                        <li><a class="pc" href="#works">Works</a></li>
-                        <li><a class="pc" href="#about">About</a></li>
-                        <li><a class="pc" href="#contact">Contact</a></li>
+                        <li><a class="pc" v-on:click="onclick('service')">Service</a></li>
+                        <li><a class="pc" v-on:click="onclick('works')" href="#works">Works</a></li>
+                        <li><a class="pc" v-on:click="onclick('about')">About</a></li>
+                        <li><a class="pc" v-on:click="onclick('contact')">Contact</a></li>
                         <li><a class="pc" v-bind:href="twiiterUrl" target=”_blank”><img class="sns-img" src="img/twitter.png" 
                             alt="インスタグラムのアイコンです"></a></li>
                         <li><a class="pc" v-bind:href="instagramUrl" 
@@ -38,10 +38,10 @@
                             <img class="w-25" src="img/bar.png" alt="">
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                          <a class="dropdown-item" href="#service">Service</a>
-                          <a class="dropdown-item" href="#works">Works</a>
-                          <a class="dropdown-item" href="#about">About</a>
-                          <a class="dropdown-item" href="#contact">Contact</a>
+                          <a class="dropdown-item" v-on:click="onclick('service')">Service</a>
+                          <a class="dropdown-item" v-on:click="onclick('works')">Works</a>
+                          <a class="dropdown-item" v-on:click="onclick('about')">About</a>
+                          <a class="dropdown-item" v-on:click="onclick('contact')">Contact</a>
                           <a class="dropdown-item" v-bind:href="twiiterUrl" target="_blank"><img class="sns-img" src="img/twitter.png" 
                             alt="インスタグラムのアイコンです"></a>
                           <a class="dropdown-item" v-bind:href="instagramUrl"  target="_blank"><img class="sns-img" src="img/instagram.png" 
@@ -99,7 +99,7 @@
                 </div>
             </section>
             <!-- WORK -->
-            <section id="works">
+            <section ref="works">
                 <div class="container">
                     <h2 class="ttl_work">works</h2>
                     <div class="d-flex works_area">
@@ -122,7 +122,7 @@
                 </div>
             </section>
             <!-- about -->
-            <section id="about">
+            <section ref="about">
                 <div class="container">
                     <h2>About</h2>
                     <p class="about_text">
@@ -164,7 +164,7 @@
                 </div>
             </section>
             <!-- contact -->
-            <section id="contact">
+            <section ref="contact">
                 <div class="container">
                     <h2>Contact</h2>
                     <div class="contact_form_wrapper">
@@ -207,10 +207,14 @@
                 instagramUrl : 'https://www.instagram.com/takaharu_isumi/?hl=ja'
             },
             methods : {
-                onclick : ()=>{｀
-                    this.scrollto("service")
+                onclick : function(refName){
+                    window.scrollTo({
+                        top:this.$refs[refName].offsetTop - 144,
+                        behavior: "smooth"
+                    })
                 }
-            }
+            }               
+
         })
     </script>
 </body>   

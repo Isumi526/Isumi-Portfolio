@@ -121,6 +121,9 @@ h4 {
   align-self: center;
   width: 70%;
 }
+.prof-table th{
+  padding: 8px;
+}
 .about_text{
   text-align: center;
 }
@@ -167,14 +170,15 @@ h4 {
   margin: 0 16px;
 }
 .contact_form_wrapper input{
-  margin-bottom: 20px;
+  margin:10px 0 20px 0;
   width: 680px;
-  margin-left: 0;
 }
 .contact_form_wrapper span{
-  font-size: 5px;
+  font-size: .5px;
   background-color:black;
   color:white ;
+  padding: 5px;
+  margin-left: 5px;
 }
 .contact_form_wrapper textarea{
   width: 680px;
