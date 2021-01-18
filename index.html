@@ -20,7 +20,7 @@
                     </div>
                     <!-- ナビ -->
                     <ul class="navi_header d-flex">
-                        <li><a class="pc" href="#service">Service</a></li>
+                        <li><a class="pc" v-on:click="onclick">Service</a></li>
                         <li><a class="pc" href="#works">Works</a></li>
                         <li><a class="pc" href="#about">About</a></li>
                         <li><a class="pc" href="#contact">Contact</a></li>
@@ -66,7 +66,7 @@
                 width="100%">
             </div>
             <!-- service -->
-            <section id="service">
+            <section ref="service">
                 <div class="container">
                     <h2>Service</h2>
                     <div class="service_area">
@@ -167,21 +167,19 @@
             <section id="contact">
                 <div class="container">
                     <h2>Contact</h2>
-                    <p class="contact_text">制作の依頼・ご相談などお気軽にお問い合わせくださいませ。<br>
-                        下記フォームよりわかる範囲でご記入ください。必須の項目は必ずご記入お願いします。</p>
-                    <div class="form">
-                        <label>貴社名<input type="text"></label><br>
-                        <label>お名前<span>必須</span><input type="text"></label><br>
-                        <label>メールアドレス<span>必須</span><input type="text"></label><br>
-                        <label>電話番号<input type="text"></label><br>
-                        <label for="inquiry"><TEXTAREA id="inquiry" placeholder="お問い合わせ内容をご記入ください"></TEXTAREA></label> 
-                    </div>
-                    <div>
+                    <div class="contact_form_wrapper">
+                        <p class="contact_text">制作の依頼・ご相談などお気軽にお問い合わせくださいませ。<br>
+                            下記フォームよりわかる範囲でご記入ください。必須の項目は必ずご記入お願いします。</p>
+                        <label>貴社名<br><input type="text"></label><br>
+                        <label>お名前<span>必須</span><br><input type="text"></label><br>
+                        <label>メールアドレス<span>必須</span><br><input type="text"></label><br>
+                        <label>電話番号<br><input type="text"></label><br>
+                        <label for="inquiry"><TEXTAREA id="inquiry" placeholder="お問い合わせ内容をご記入ください"></TEXTAREA></label>
                         <button id="send" type="submit" disabled>内容を送信する</button>
                     </div>
                  </div>
             </section>
-            <p class="top" >
+            <p class="toTop" >
                 <img id="js-top" width="22" height="14" 
                 src="https://u-d-l.jp/wp-content/themes/underline/common/icon_totop.gif" alt="">
             </p>
@@ -207,6 +205,11 @@
             data : {
                 twiiterUrl : 'https://twitter.com/takaharu_isumi',
                 instagramUrl : 'https://www.instagram.com/takaharu_isumi/?hl=ja'
+            },
+            methods : {
+                onclick : ()=>{｀
+                    this.scrollto("service")
+                }
             }
         })
     </script>
