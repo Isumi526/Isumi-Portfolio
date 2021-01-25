@@ -10,18 +10,18 @@
 <body>
     <div id="app">
         <!-- ヘッダー -->
-        <header>
+        <header id="header"> 
             <div class="container">
                 <div class="header_wrapper">
                     <div class="logo_header">
-                        <a href="index.html"><img class="header-logo" 
+                        <a href=#header><img class="header-logo" 
                         src="img/header_logo.png" 
                         alt="" width="300px" ></a>
                     </div>
                     <!-- ナビ -->
                     <ul class="navi_header d-flex">
                         <li><a class="pc" v-on:click="onclick('service')">Service</a></li>
-                        <li><a class="pc" v-on:click="onclick('works')" href="#works">Works</a></li>
+                        <li><a class="pc" v-on:click="onclick('works')">Works</a></li>
                         <li><a class="pc" v-on:click="onclick('about')">About</a></li>
                         <li><a class="pc" v-on:click="onclick('contact')">Contact</a></li>
                         <li><a class="pc" v-bind:href="twiiterUrl" target=”_blank”><img class="sns-img" src="img/twitter.png" 
@@ -179,11 +179,12 @@
                     </div>
                  </div>
             </section>
-            <p class="toTop" >
-                <img id="js-top" width="22" height="14" 
-                src="https://u-d-l.jp/wp-content/themes/underline/common/icon_totop.gif" alt="">
-            </p>
-    
+            <div class="toTop">
+                <a href=#header>
+                    <img  width="22px" 
+                    src="https://u-d-l.jp/wp-content/themes/underline/common/icon_totop.gif" alt="">
+                </a>
+            </div>    
         </main>
         <!-- フッター -->
         <footer>
@@ -209,7 +210,7 @@
             methods : {
                 onclick : function(refName){
                     window.scrollTo({
-                        top:this.$refs[refName].offsetTop - 144,
+                        top:this.$refs[refName].offsetTop - 150,
                         behavior: "smooth"
                     })
                 }

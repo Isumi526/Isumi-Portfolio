@@ -13,6 +13,7 @@ html{
 }
 a {
   color: #1f1f1f;
+  cursor: pointer;
 }
 .container{
   max-width: 1200px;
@@ -184,7 +185,6 @@ h4 {
   width: 680px;
   height: 180px;
   margin-bottom: 16px;
-  margin-left: 6px
 }
 .contact_form_wrapper button{
   width: 250px;
