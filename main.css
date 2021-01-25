@@ -49,6 +49,7 @@ header{
   flex: auto;
 }
 .service_item p{
+  margin-top: 10px;
   line-height: 26px;
 }
 .sns-img {
@@ -123,6 +124,9 @@ h4 {
   width: 70%;
 }
 .prof-table th{
+  padding: 8px;
+}
+.prof-table td{
   padding: 8px;
 }
 .about_text{
