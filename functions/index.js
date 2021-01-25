@@ -3,52 +3,38 @@ const functions = require("firebase-functions");
 // // Create and Deploy Your First Cloud Functions
 // // https://firebase.google.com/docs/functions/write-firebase-functions
 //
-exports.emailSend = functions.https.onRequest((request, response) => {
-var mailer = require('nodemailer');
+exports.sendMail = functions.https.onRequest(async(request, response) => {
+ await cors(request, response, async() =>{
+    const body = request.body;
+    const user = body.Takaharu isumi;
+    const from = body.from
+    const pass = body.Isumisu526
+    const to = body.to
+    const text = body.text
+    const subject = body.subject
 
-//SMTPの設定
-var setting = {
-    //SMTPサーバーを使う場合
-    host: 'SMTPホスト',
-    auth: {
-        user: 'ユーザ名',
-        pass: 'パスワード',
-        port: 'SMTPポート番号'
-    }
+    var smtpConfig = {
+        host: 'smtp.gmail.com',
+        port: 465,
+        secure: true, // SSL
+        auth: {
+            user: Takaharu isumi,
+            pass: Isumisu526
+        }
+    };
 
-    /*
-    //Webサービスを使う場合
-    service: 'サービス名', //'Gmail'、'Hotmail'、'Yahoo Mail'など
-    auth: {
-        user: 'アカンと名',
-        pass: 'パスワード',
-        port: 'ポート番号' //'25'など
-    }
-    */
-};
+    // メッセージ
+    var message = {
+        from    : from,
+        to      : to,
+        subject : subject,
+        text    : text,
+    };
 
-//メールの内容
-var mailOptions = {
-    from: '送信者のメールアドレス',
-    to: '送信先メールアドレス',
-    subject: 'メールの件名',
-    html: 'メールの内容' //HTMLタグが使えます
-};
-
-//SMTPの接続
-var smtp = mailer.createTransport('SMTP', setting);
-
-//メールの送信
-smtp.sendMail(mailOptions, function(err, res){
-    //送信に失敗したとき
-    if(err){
-        console.log(err);
-    //送信に成功したとき
-    }else{
-        console.log('Message sent: ' + res.message);
-    }
-    //SMTPの切断
-    smtp.close();
-});
-  response.send("Hello from Firebase!");
-});
+    var transporter = nodemailer.createTransport(smtpConfig);
+    transporter.sendMail(message, function(err, res) {
+    if(err){console.error(err)}
+        response.send(err || res);
+    });
+    })
+})
