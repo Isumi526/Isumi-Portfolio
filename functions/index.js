@@ -1,4 +1,6 @@
 const functions = require("firebase-functions");
+const nodemailer = require("nodemailer");
+const cors = require('cors')({ origin: true })
 
 // // Create and Deploy Your First Cloud Functions
 // // https://firebase.google.com/docs/functions/write-firebase-functions
@@ -32,7 +34,7 @@ exports.emailSend = functions.https.onRequest(async(request, response) => {
     };
 
     var transporter = nodemailer.createTransport(smtpConfig);
-    transporter.emailSend(message, function(err, res) {
+    transporter.sendMail(message, function(err, res) {
     if(err){console.error(err)}
         response.send(err || res);
     });
