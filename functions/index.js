@@ -21,7 +21,7 @@ exports.emailSend = functions.https.onRequest(async(request, response) => {
         secure: true, // SSL
         auth: {
             user: "ismsn526@gmail.com",
-            pass: "Isumisu526"
+            pass: "slbxoaqguefbvbwm"
         }
     };
 

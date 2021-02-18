@@ -1,92 +1,85 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="main.css">
-    <title>Document</title>
+    <meta name="twitter:card" content="カード種類" />
+    <!--①-->
+    <meta name="twitter:site" content="@ユーザー名" />
+    <!--②-->
+    <meta property="og:url" content="記事のURL" />
+    <!--③-->
+    <meta property="og:title" content="記事のタイトル" />
+    <!--④-->
+    <meta property="og:description" content="記事の要約（ディスクリプション）" />
+    <!--⑤-->
+    <meta property="og:image" content="画像のURL" />
+    <!--⑥-->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Takaharu Isumi's Portfolio</title>
 </head>
+
 <body>
     <div id="app">
         <!-- ヘッダー -->
-        <header id="header"> 
+        <header class="header" id="header">
             <div class="container">
                 <div class="header_wrapper">
-                    <div class="logo_header">
-                        <a href=#header><img class="header-logo" 
-                        src="img/header_logo.png" 
-                        alt="" width="300px" ></a>
+                    <div class="header_left">
+                        <a href="#header">
+                            <h1>ISUMI　TAKAHARU</h1>
+                        </a>
                     </div>
                     <!-- ナビ -->
-                    <ul class="navi_header d-flex">
-                        <li><a class="pc" v-on:click="onclick('service')">Service</a></li>
-                        <li><a class="pc" v-on:click="onclick('works')">Works</a></li>
-                        <li><a class="pc" v-on:click="onclick('about')">About</a></li>
-                        <li><a class="pc" v-on:click="onclick('contact')">Contact</a></li>
-                        <li><a class="pc" v-bind:href="twiiterUrl" target=”_blank”><img class="sns-img" src="img/twitter.png" 
-                            alt="インスタグラムのアイコンです"></a></li>
-                        <li><a class="pc" v-bind:href="instagramUrl" 
-                            target=”_blank”>
-                            <img class="sns-img" src="img/instagram.png" alt="ツイッターのアイコンです"></a></li>
-                    </ul>          
-                    <!-- メニューバー -->
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle bg-dark"
-                                type="button" id="dropdownMenu1" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
-                            <img class="w-25" src="img/bar.png" alt="">
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                          <a class="dropdown-item" v-on:click="onclick('service')">Service</a>
-                          <a class="dropdown-item" v-on:click="onclick('works')">Works</a>
-                          <a class="dropdown-item" v-on:click="onclick('about')">About</a>
-                          <a class="dropdown-item" v-on:click="onclick('contact')">Contact</a>
-                          <a class="dropdown-item" v-bind:href="twiiterUrl" target="_blank"><img class="sns-img" src="img/twitter.png" 
-                            alt="インスタグラムのアイコンです"></a>
-                          <a class="dropdown-item" v-bind:href="instagramUrl"  target="_blank"><img class="sns-img" src="img/instagram.png" 
-                            alt="ツイッターのアイコンです"></a>
-                        </div>
-                      </div>
+                    <nav class="header_nav">
+                        <ul class="header_nav_list">
+                            <li class="header_nav_list_item"><a class="pc" v-on:click="onclick('service')">Service</a></li>
+                            <li class="header_nav_list_item"><a class="pc" v-on:click="onclick('works')">Works</a></li>
+                            <li class="header_nav_list_item"><a class="pc" v-on:click="onclick('about')">About</a></li>
+                            <li class="header_nav_list_item"><a class="pc" v-on:click="onclick('contact')">Contact</a></li>
+                            <li class="header_nav_list_item"><a class="pc" v-bind:href="twitterUrl" target=”_blank”><img class="sns-img"
+                                        src="img/twitter.png" alt="インスタグラムのアイコンです"></a></li>
+                            <li class="header_nav_list_item"><a class="pc" v-bind:href="instagramUrl" target=”_blank”>
+                                    <img class="sns-img" src="img/instagram.png" alt="ツイッターのアイコンです"></a></li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </header>
-        <!-- 写真 -->
         <main>
-            <div class="mv">
-                <img
-                class="pc"
-                src="img/mv.jpeg" 
-                alt="MV画像"
-                width="100%">
-                <img
-                class="phone"
-                src="img/mv_2.jpeg" 
-                alt=""
-                width="100%">
+            <!-- トップ -->
+            <section class="top">
+                <p>
+                    <img src="./img/mv.jpeg" alt="web制作">
+                </p>
+            </section><!-- /.top -->
             </div>
             <!-- service -->
-            <section ref="service">
+            <section class="service" ref="service">
                 <div class="container">
-                    <h2>Service</h2>
-                    <div class="service_area">
-                            <div class="cent service_item">
-                                <h3>ディレクション</h3>
-                                <h4>DIRECTION</h4>
-                                <img class="cent imag_s1" src="img/direction.png" alt="">
-                                <p style="text-align: left;">
-                                    お客様の要望をヒアリングし、現状の問題点を洗い出し、効果的なプランを作成いたします。制作ではデザインに入る前の事前の準備が特に重要になります。何が必要で何が必要でないのかを判断し、費用対効果の高いWebサイトを作るための土台を作ります。
-                                </p>
-                            </div>
-                            <div class="cent service_item">
-                                <h3>コーディング</h3>
-                                <h4>CODING</h4>
-                                <img class="imag_s1" src="img/cording.png" alt="">
-                                <p style="text-align: left;"> 
-                                    デザインの意図を理解し、動きや効果を適切に使用することでWebサイトの仕上がりは大きく変わります。スマートフォンサイト、ワードプレスを使用した更新性の高いサイト、Javascriptを使用した動きのあるサイトなど、様々なサイトのコーディングを行っております。
-                                </p>
-                            </div>
-                            <!-- <div class="cent service_item">
+                    <h2 class="section_ttl">Service</h2>
+                    <div class="service_wrapper">
+                        <div class="service_item">
+                            <h3 class="service_item_ttl">ディレクション<br><span>DIRECTION</span></h3>
+                            <p class="service_item_img">
+                                <img src="img/direction.png" alt="ディレクション">
+                            </p>
+                            <p class="service_item_text">
+                                お客様のをヒアリングし、現状の問題点を洗い出し、効果的なプランを作成いたします。制作ではデザインに入る前の事前の準備が特に重要になります。何が必要で何が必要でないのかを判断し、費用対効果の高いWebサイトを作るための土台を作ります。
+                            </p>
+                        </div>
+                        <div class="cent service_item">
+                            <h3 class="service_item_ttl">コーディング<br><span>CORDING</span></h3>
+                            <p class="service_item_img">
+                                <img src="img/cording.png" alt="コーディング">
+                            </p><!-- /.service_item_img -->
+                            <p class="service_item_text">
+                                デザインの意図を理解し、動きや効果を適切に使用することでWebサイトの仕上がりは大きく変わります。スマートフォンサイト、ワードプレスを使用した更新性の高いサイト、Javascriptを使用した動きのあるサイトなど、様々なサイトのコーディングを行っております。
+                            </p>
+                        </div>
+                        <!-- <div class="cent service_item">
                                 <h3>WordPress</h3>
                                 <h4>WordPress</h4>
                                 <img class="imag_s1" src="img/wordpress.png" alt="">
@@ -95,78 +88,81 @@
                                 </p>
                             </div> -->
                     </div>
-    
+
                 </div>
             </section>
-            <!-- WORK -->
-            <section ref="works">
+            <!-- WORKS -->
+            <section class="works" ref="works">
                 <div class="container">
-                    <h2 class="ttl_work">works</h2>
-                    <div class="d-flex works_area">
-                            <div class="item_work cent">
-                                <a href="works.html"><img  class="border border-dark work_item" 
-                                    src="img/work_cresta.jpeg" 
-                                    alt="作品へのリンクです"></a>
-                            </div>
-                            <div class="item_work cent">
-                                <a href=".//Quiz/index.html" target="_blank"><img class="border border-dark work_item" 
-                                    src="img/quiz_image.png" 
-                                    alt=""></a>
-                            </div>
-                            <div class="item_work cent">
-                                <a href="#"><img class="border border-dark work_item" 
-                                    src="https://u-d-l.jp/wp-content/themes/underline/images/icon_service01.jpg" 
-                                    alt=""></a>
-                            </div>
+                    <h2 class="section_ttl">Works</h2>
+                    <div class="works_wrapper">
+                        <div class="works_item">
+                            <p>
+                                <a href="./portfolios/cresta_first/"　target="_blank"><img  src="./img/work_cresta.jpeg"alt="作品へのリンクです"></a>
+                            </p>
+                        </div>
+                        <div class="works_item">
+                            <p>
+                                <a href="./portfolios/cresta_third/" target="_blank"><img src="img/cresta_third_icon.jpeg" alt=""></a>
+                            </p>
+                        </div>
+                        <div class="works_item">
+                            <p>
+                                <a href="#"><img src="https://u-d-l.jp/wp-content/themes/underline/images/icon_service01.jpg"
+                                        alt=""></a>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </section>
             <!-- about -->
-            <section ref="about">
+            <section class="about" ref="about">
                 <div class="container">
-                    <h2>About</h2>
-                    <p class="about_text">
+                    <h2 class="section_ttl">About</h2>
+                    <p class="about_message">
                         大阪にてフリーランスのWeb制作をしております。<br>
                         HPやLPの作成など、お気軽にご相談ください<br>
                     </p>
-                    <div class="about_area">
-                        <img class="about_icon about_item" src="img/face_icon.png" 
-                        alt="顔アイコンです"
-                        width="250px">
-                        <table class="prof-table about_item" border="1">
-                            <tr>
-                                <th>名称：</th>
-                                <td>亥角　貴治【Isumi Takaharu】
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>所在地：</th>
-                                <td>大阪市内</td>
-                            </tr>
-                            
-                            <tr>
-                                <th>事業内容：</th>
-                                <td>Web制作におけるディレクション、コーディング</td>
-                            <tr>
-                            </tr>
+                    <div class="about_wrapper">
+                        <div class="about_left">
+                            <img class="about_icon about_item" src="img/face_icon.png" alt="顔アイコンです" width="250px">
+                        </div>
+                        <div class="about_right">
+                            <table>
+                                <tr>
+                                    <th>名称：</th>
+                                    <td>亥角　貴治【Isumi Takaharu】
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>所在地：</th>
+                                    <td>大阪市内</td>
+                                </tr>
+    
+                                <tr>
+                                    <th>事業内容：</th>
+                                    <td>Web制作におけるディレクション、コーディング</td>
+                                <tr>
+                                </tr>
                                 <th>お問い合わせ：</th>
                                 <td>ismsn526＠gmail.com(＠を半角に変えてお送りください。)</td>
-                            </tr>
-                            <tr>
-                                <th>Twitter：</th>
-                                <td><a href="https://twitter.com/takaharu_isumi" target="_blank">takaharu_isumi</a></td>
-                            </tr>
-                            <tr>
-                                <th>Instagram：</th>
-                                <td><a v-bind:href="instagramUrl"  target="_blank">takaharu_isumi</a> </td>
-                            </tr>
-                        </table>     
-                </div>
+                                </tr>
+                                <tr>
+                                    <th>Twitter：</th>
+                                    <td><a href="https://twitter.com/takaharu_isumi" target="_blank">takaharu_isumi</a></td>
+                                </tr>
+                                <tr>
+                                    <th>Instagram：</th>
+                                    <td><a v-bind:href="instagramUrl" target="_blank">takaharu_isumi</a> </td>
+                                </tr>
+                            </table>
+                        </div><!-- /.about_left -->
+                    </div>
             </section>
             <!-- contact -->
-            <section ref="contact">
+            <!-- <section ref="contact">
                 <div class="container">
-                    <h2>Contact</h2>
+                    <h2 class="section_ttl">Contact</h2>
                     <div class="contact_form_wrapper">
                         <p class="contact_text">制作の依頼・ご相談などお気軽にお問い合わせくださいませ。<br>
                             下記フォームよりわかる範囲でご記入ください。必須の項目は必ずご記入お願いします。</p>
@@ -177,46 +173,43 @@
                         <label for="inquiry"><TEXTAREA id="inquiry" placeholder="お問い合わせ内容をご記入ください"></TEXTAREA></label>
                         <button id="send" type="submit" disabled>内容を送信する</button>
                     </div>
-                 </div>
-            </section>
-            <div class="toTop">
-                <a href=#header>
-                    <img  width="22px" 
-                    src="https://u-d-l.jp/wp-content/themes/underline/common/icon_totop.gif" alt="">
-                </a>
-            </div>    
+                </div>
+            </section> -->
+            <section>
+                <p class="toTop">
+                    <a class="toTop_link" href=#header>
+                        <img class="toTop_link_img" src="https://u-d-l.jp/wp-content/themes/underline/common/icon_totop.gif" alt="トップへ戻る">
+                    </a>
+                </p>
+            </section><!-- /.toTop -->
         </main>
         <!-- フッター -->
         <footer>
             <div class="container">
-                <div class="copy">
-                    <p>© Isumi All rights reserved.</p>
+                <div class="copyright">
+                    <p>© ISUMI TAKAHARU 　All rights reserved.</p>
                 </div>
             </div>
         </footer>
     </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     <script>
         var app = new Vue({
-            el : '#app',
-            data : {
-                twiiterUrl : 'https://twitter.com/takaharu_isumi',
-                instagramUrl : 'https://www.instagram.com/takaharu_isumi/?hl=ja'
+            el: '#app',
+            data: {
+                twitterUrl: 'https://twitter.com/takaharu_isumi',
+                instagramUrl: 'https://www.instagram.com/takaharu_isumi/?hl=ja'
             },
-            methods : {
-                onclick : function(refName){
+            methods: {
+                onclick: function (refName) {
                     window.scrollTo({
-                        top:this.$refs[refName].offsetTop - 150,
+                        top: this.$refs[refName].offsetTop - 150,
                         behavior: "smooth"
                     })
                 }
-            }               
+            }
 
         })
     </script>
-</body>   
+</body>
 </html>
