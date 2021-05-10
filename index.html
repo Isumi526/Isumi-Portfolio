@@ -4,212 +4,311 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="twitter:card" content="カード種類" />
-    <!--①-->
-    <meta name="twitter:site" content="@ユーザー名" />
-    <!--②-->
-    <meta property="og:url" content="記事のURL" />
-    <!--③-->
-    <meta property="og:title" content="記事のタイトル" />
-    <!--④-->
-    <meta property="og:description" content="記事の要約（ディスクリプション）" />
-    <!--⑤-->
-    <meta property="og:image" content="画像のURL" />
-    <!--⑥-->
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/main.css">
-    <title>Takaharu Isumi's Portfolio</title>
+    <meta name="description" content="大阪でWeb制作のフリーランスをしています。サイト制作におけるコーディングなど、お気軽にご相談ください。">
+    <link rel="icon" href="favicon.svg">
+    <!-- fontawsome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+        integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <!-- vegas -->
+    <link rel="stylesheet" href="http://jaysalvat.github.io/vegas/releases/latest/vegas.min.css">
+    <!-- drawer.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.1/css/drawer.min.css"
+        media="screen and (max-width:1024px)">
+    <!-- jquery & iScroll -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.1.3/iscroll.min.js"></script>
+    <!-- drawer.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.1/js/drawer.min.js"></script>
+    <!-- wow -->
+    <link rel="stylesheet" href="css/animate.css">
+    <script src="js/wow.min.js"></script>
+    <!-- original -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+    <title>Isumi portfolio | 大阪でWeb制作のフリーランスをしております。</title>
 </head>
 
-<body>
-    <div id="app">
-        <!-- ヘッダー -->
-        <header class="header" id="header">
-            <div class="container">
-                <div class="header_wrapper">
-                    <div class="header_left">
-                        <a href="#header">
-                            <h1>ISUMI　TAKAHARU</h1>
-                        </a>
-                    </div>
-                    <!-- ナビ -->
-                    <nav class="header_nav">
-                        <ul class="header_nav_list">
-                            <li class="header_nav_list_item"><a class="pc" v-on:click="onclick('service')">Service</a></li>
-                            <li class="header_nav_list_item"><a class="pc" v-on:click="onclick('works')">Works</a></li>
-                            <li class="header_nav_list_item"><a class="pc" v-on:click="onclick('about')">About</a></li>
-                            <li class="header_nav_list_item"><a class="pc" v-on:click="onclick('contact')">Contact</a></li>
-                            <li class="header_nav_list_item"><a class="pc" v-bind:href="twitterUrl" target=”_blank”><img class="sns-img"
-                                        src="img/twitter.png" alt="インスタグラムのアイコンです"></a></li>
-                            <li class="header_nav_list_item"><a class="pc" v-bind:href="instagramUrl" target=”_blank”>
-                                    <img class="sns-img" src="img/instagram.png" alt="ツイッターのアイコンです"></a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </header>
-        <main>
-            <!-- トップ -->
-            <section class="top">
-                <p>
-                    <img src="./img/mv.jpeg" alt="web制作">
-                </p>
-            </section><!-- /.top -->
-            </div>
-            <!-- service -->
-            <section class="service" ref="service">
-                <div class="container">
-                    <h2 class="section_ttl">Service</h2>
-                    <div class="service_wrapper">
-                        <div class="service_item">
-                            <h3 class="service_item_ttl">ディレクション<br><span>DIRECTION</span></h3>
-                            <p class="service_item_img">
-                                <img src="img/direction.png" alt="ディレクション">
-                            </p>
-                            <p class="service_item_text">
-                                お客様のをヒアリングし、現状の問題点を洗い出し、効果的なプランを作成いたします。制作ではデザインに入る前の事前の準備が特に重要になります。何が必要で何が必要でないのかを判断し、費用対効果の高いWebサイトを作るための土台を作ります。
-                            </p>
-                        </div>
-                        <div class="cent service_item">
-                            <h3 class="service_item_ttl">コーディング<br><span>CORDING</span></h3>
-                            <p class="service_item_img">
-                                <img src="img/cording.png" alt="コーディング">
-                            </p><!-- /.service_item_img -->
-                            <p class="service_item_text">
-                                デザインの意図を理解し、動きや効果を適切に使用することでWebサイトの仕上がりは大きく変わります。スマートフォンサイト、ワードプレスを使用した更新性の高いサイト、Javascriptを使用した動きのあるサイトなど、様々なサイトのコーディングを行っております。
-                            </p>
-                        </div>
-                        <!-- <div class="cent service_item">
-                                <h3>WordPress</h3>
-                                <h4>WordPress</h4>
-                                <img class="imag_s1" src="img/wordpress.png" alt="">
-                                <p>
-                                    お客様の要望をヒアリングし、現状の問題点を洗い出し、効果的なプランを作成いたします。制作ではデザインに入る前の事前の準備が特に重要になります。何が必要で何が必要でないのかを判断し、費用対効果の高いWebサイトを作るための土台を作ります。
-                                </p>
-                            </div> -->
-                    </div>
+<body class="drawer drawer--right">
+    <!-- ヘッダー -->
+    <header id="header" class="header wow fadeInUp" data-wow-duration="1s">
+        <div class="header_wrapper inner">
+            <h1 class="header_logo"><a href="#body">Isumi's portfolio site</a></h1>
+            <!-- ハンバーガーボタン -->
+            <!-- <button type="button" class="drawer-toggle drawer-hamburger hidden-pc">
+                <span class="sr-only">toggle navigation</span>
+                <span class="drawer-hamburger-icon"></span>
+            </button> -->
+            <!-- ナビ -->
+            <nav class="drawer-nav header_nav">
+                <ul class="drawer-menu header_nav_list">
+                    <li class="header_nav_list_item"><a href="#service">Service</a></li>
+                    <li class="header_nav_list_item"><a href="#works">Works</a></li>
+                    <li class="header_nav_list_item"><a href="#about">About</a></li>
+                    <li class="header_nav_list_item"><a href="#contact">Contact</a></li>
+                    <!-- <li class="header_nav_list_item"><a href="https://twitter.com/takaharu_isumi" target=”_blank”><i class="fab fa-twitter"></i></a></li>
+                    <li class="header_nav_list_item"><a href="https://www.instagram.com/takaharu_isumi/?hl=ja" target=”_blank”><i class="fab fa-instagram"></i></a></li> -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <!-- トップ -->
+        <div id="top" class="top wow fadeIn">
+            <p class="top_message"><a href="#service">Hello, portfolio</a></p><!-- /.top_message -->
+        </div><!-- /.top -->
 
-                </div>
-            </section>
-            <!-- WORKS -->
-            <section class="works" ref="works">
-                <div class="container">
-                    <h2 class="section_ttl">Works</h2>
-                    <div class="works_wrapper">
-                        <div class="works_item">
-                            <p>
-                                <a href="./portfolios/cresta_first/"　target="_blank"><img  src="./img/work_cresta.jpeg"alt="作品へのリンクです"></a>
-                            </p>
-                        </div>
-                        <div class="works_item">
-                            <p>
-                                <a href="./portfolios/cresta_third/" target="_blank"><img src="img/cresta_third_icon.jpeg" alt=""></a>
-                            </p>
-                        </div>
-                        <div class="works_item">
-                            <p>
-                                <a href="#"><img src="https://u-d-l.jp/wp-content/themes/underline/images/icon_service01.jpg"
-                                        alt=""></a>
-                            </p>
-                        </div>
+        <!-- service -->
+        <section id="service" class="service wow fadeInLeft inner" data-wow-duration="1s">
+            <h2 class="section_ttl wow fadeInLeft" data-wow-duration="1s">Service</h2>
+            <p class="service_message wow fadeInLeft" data-wow-duration="1s">
+                HTML/CSS、SASS、JavaScript(jQuery)のスキルがあります。<br>
+                HPやLPの制作について、お気軽にご相談ください。
+            </p>
+            <ul class="service_item_list">
+                <li class="service_item">
+                    <h3 class="service_item_title wow fadeInLeft">コーディング<span class="sub">CODING</span></h3>
+                    <div class="service_item_picture wow fadeInLeft">
+                        <i class="fas fa-laptop fa-8x"></i>
                     </div>
-                </div>
-            </section>
-            <!-- about -->
-            <section class="about" ref="about">
-                <div class="container">
-                    <h2 class="section_ttl">About</h2>
-                    <p class="about_message">
-                        大阪にてフリーランスのWeb制作をしております。<br>
-                        HPやLPの作成など、お気軽にご相談ください<br>
+                    <p class="service_item_text wow fadeInLeft">
+                        デザインの意図を理解し、動きや効果などのアニメーションを適切に使用します。また、アクセシビリティや保守性を重視し、使いやすく、メンテナンスがしやすいようにコーディングをします。
                     </p>
-                    <div class="about_wrapper">
-                        <div class="about_left">
-                            <img class="about_icon about_item" src="img/face_icon.png" alt="顔アイコンです" width="250px">
-                        </div>
-                        <div class="about_right">
-                            <table>
-                                <tr>
-                                    <th>名称：</th>
-                                    <td>亥角　貴治【Isumi Takaharu】
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>所在地：</th>
-                                    <td>大阪市内</td>
-                                </tr>
-    
-                                <tr>
-                                    <th>事業内容：</th>
-                                    <td>Web制作におけるディレクション、コーディング</td>
-                                <tr>
-                                </tr>
-                                <th>お問い合わせ：</th>
-                                <td>ismsn526＠gmail.com(＠を半角に変えてお送りください。)</td>
-                                </tr>
-                                <tr>
-                                    <th>Twitter：</th>
-                                    <td><a href="https://twitter.com/takaharu_isumi" target="_blank">takaharu_isumi</a></td>
-                                </tr>
-                                <tr>
-                                    <th>Instagram：</th>
-                                    <td><a v-bind:href="instagramUrl" target="_blank">takaharu_isumi</a> </td>
-                                </tr>
-                            </table>
-                        </div><!-- /.about_left -->
+                </li>
+                <li class="service_item">
+                    <h3 class="service_item_title wow fadeInLeft">品質チェック<span class="sub">CHECK</span></h3>
+                    <div class="service_item_picture wow fadeInLeft">
+                        <i class="fas fa-list fa-8x"></i>
                     </div>
-            </section>
-            <!-- contact -->
-            <!-- <section ref="contact">
-                <div class="container">
-                    <h2 class="section_ttl">Contact</h2>
-                    <div class="contact_form_wrapper">
-                        <p class="contact_text">制作の依頼・ご相談などお気軽にお問い合わせくださいませ。<br>
-                            下記フォームよりわかる範囲でご記入ください。必須の項目は必ずご記入お願いします。</p>
-                        <label>貴社名<br><input type="text"></label><br>
-                        <label>お名前<span>必須</span><br><input type="text"></label><br>
-                        <label>メールアドレス<span>必須</span><br><input type="text"></label><br>
-                        <label>電話番号<br><input type="text"></label><br>
-                        <label for="inquiry"><TEXTAREA id="inquiry" placeholder="お問い合わせ内容をご記入ください"></TEXTAREA></label>
-                        <button id="send" type="submit" disabled>内容を送信する</button>
+                    <p class="service_item_text wow fadeInLeft">
+                        デザインとずれがないか、動作に問題がないかなど、完成前のチェック項目を取り決め、もれなく確認することで品質管理を徹底しております。<a href="checklist.html">チェックリスト</a>
+                    </p>
+                </li>
+                <li class="service_item">
+                    <h3 class="service_item_title wow fadeInLeft">アップロード<span class="sub">UPLOAD</span></h3>
+                    <div class="service_item_picture wow fadeInLeft">
+                        <i class="fas fa-upload fa-8x"></i>
                     </div>
-                </div>
-            </section> -->
-            <section>
-                <p class="toTop">
-                    <a class="toTop_link" href=#header>
-                        <img class="toTop_link_img" src="https://u-d-l.jp/wp-content/themes/underline/common/icon_totop.gif" alt="トップへ戻る">
-                    </a>
-                </p>
-            </section><!-- /.toTop -->
-        </main>
-        <!-- フッター -->
-        <footer>
-            <div class="container">
-                <div class="copyright">
-                    <p>© ISUMI TAKAHARU 　All rights reserved.</p>
+                    <p class="service_item_text wow fadeInLeft">
+                        サーバーの契約、ドメインの取得、web上への公開まで責任を持って代行させていただきます。ファイルのみのお渡しや、既にお持ちのサーバーへのアップも可能です。
+                    </p>
+                </li>
+            </ul>
+        </section>
+
+        <!-- WORKS -->
+        <section id="works" class="works wow fadeInUp" data-wow-duration="1s">
+            <div class="inner">
+                <h2 class="section_ttl">Works</h2>
+                <div class="works_wrapper">
+                    <div class="works_item wow fadeInUp" data-wow-duration="1s">
+                        <a href="./portfolios/cresta_3/index.html" target="_blank"><img src="./img/works03.jpg"
+                                alt="Webサイトのポートフォリオへ"></a>
+                    </div>
+                    <div class="works_item wow fadeInUp" data-wow-duration="1s">
+                        <a href="./portfolios/solobon/index.html" target="_blank"><img src="./img/works02.jpg"
+                                alt="Webサイトのポートフォリオへ"></a>
+                    </div>
+                    <div class="works_item wow fadeInUp" data-wow-duration="1s">
+                        <a href="./portfolios/daytra2-2/" target="_blank"><img src="./img/works01.jpg"
+                                alt="Webサイトのポートフォリオへ"></a>
+                    </div>
                 </div>
             </div>
-        </footer>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
-    <script>
-        var app = new Vue({
-            el: '#app',
-            data: {
-                twitterUrl: 'https://twitter.com/takaharu_isumi',
-                instagramUrl: 'https://www.instagram.com/takaharu_isumi/?hl=ja'
-            },
-            methods: {
-                onclick: function (refName) {
-                    window.scrollTo({
-                        top: this.$refs[refName].offsetTop - 150,
-                        behavior: "smooth"
-                    })
-                }
-            }
+        </section>
 
-        })
+        <!-- about -->
+        <section id="about" class="about wow fadeInRight" data-wow-duration="1s">
+            <h2 class="section_ttl wow fadeInRight" data-wow-duration="1s">About</h2>
+            <div class="about_wrapper container">
+                <div class="about_left wow fadeInRight" data-wow-duration="1s">
+                    <img class="about_icon about_item" src="./img/face.jpg" alt="顔アイコン" width="250px">
+                </div>
+                <p class="about-right wow fadeInRight" data-wow-duration="1s">
+                    Takaharu Isumi / 亥角　貴治<br>
+                    1994年5月、兵庫県宝塚市に生まれる<br>
+                    小学生活はフットサル、中学生活は吹奏楽に全てを捧げる。<br>
+                    高校生時代、ファッションとロックに目覚め、専門学校行きの学費とライブハウス出演費のためアルバイトに明け暮れる。<br>
+                    上田安子服飾専門学校を卒業後、王手アパレル企業に就職し、1年目で店長候補に選ばれる。<br>
+                    人の人生にもっと大きな影響を与えられるような仕事がしたい！と投資用不動産会社へ転職。<br>
+                    企業経営者の方を中心に多くのお客様方からご縁をいただき、入社2年目で社内売り上げ上位10％に滑り込む。<br>
+                    そんな中、自分で書いたコードで初めてPCが動いた瞬間に感銘を受け、Webの世界で生きていくことを決意し退社。<br>
+                    複数のWebスクールを受講後、現在はWeb制作エンジニアとして活動しています。<br>
+                    趣味は週7の筋トレとサウナ。<br>
+                    ベンチプレスはMax80Kgまで上がります(100kgに向けてトレーニング中)。<br>
+                    ”目標は必ず達成する”人生で培ってきたコミット力が売りです。
+                    <!-- 東京と大阪、転職、2職種経験、、、経験値と行動力みたいな！ -->
+                    <!-- イケイケじゃない、親しみ易さ！可愛げ！ -->
+                </p>
+            </div>
+        </section>
+
+        <!-- contact -->
+        <section id="contact" class="contact wow fadeInUp" data-wow-duration="1s">
+            <div class="container">
+                <h2 class="section_ttl wow fadeInUp" data-wow-duration="1s">
+                    Contact
+                </h2><!-- /.section_ttl -->
+                <p class="contact_message wow fadeInUp" data-wow-duration="1s">
+                    ここまでご覧いただき、ありがとうございます。<br>
+                    制作のご依頼・ご相談などお気軽にお問い合わせくださいませ。
+                </p><!-- /.contact_message -->
+                <p class="contact_adress wow fadeInUp" data-wow-duration="1s"><i class="far fa-envelope"></i>
+                    ismsn526＠gmail.com</p>
+                <div class="form-wrapper wow fadeInUp" data-wow-duration="1s">
+                    <form
+                        action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScTdaaCns0pdIbVQ6wr1arHa28G5kpTNQ_vijpnaB9d1EahKQ/formResponse"
+                        id="form">
+                        <div class="box">
+                            <input type="text" name="entry.2140070817" id="name" placeholder="お名前" required>
+                        </div>
+                        <div class="box">
+                            <input type="mail" name="entry.1737374162" id="mail" placeholder="メールアドレス" required>
+                        </div>
+                        <div class="box">
+                            <textarea name="entry.2055364136" id="message" cols="30" rows="10" placeholder="お問い合わせ内容"
+                                required></textarea>
+                            <!-- /# -->
+                        </div>
+                        <input type="submit" class="submit-btn" 　value="送信する">
+                    </form>
+                    <p class="end-message">お問い合わせいただきありがとうございます。折り返し連絡させていただきまので、少々お待ちください。</p>
+                    <p class="false-message">送信失敗です。入力内容をご確認ください。</p>
+                </div>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+            </div>
+        </section><!-- /.contact -->
+    </main>
+
+    <!-- フッター -->
+    <footer>
+        <div class="inner">
+            <div class="copyright wow fadeInUp" data-wow-duration="1s">
+                <p>&copy; ISUMI TAKAHARU 　All rights reserved.</p>
+            </div>
+        </div>
+        <div id="page_top" class="wow fadeInUp" data-wow-duration="1s"><a href="#">TOP</a></div>
+    </footer>
+
+    <script>
+        // 問合せフォーム
+        $(document).ready(function () {
+
+            $('#form').submit(function (event) {
+                var formData = $('#form').serialize();
+                $.ajax({
+                    url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLScTdaaCns0pdIbVQ6wr1arHa28G5kpTNQ_vijpnaB9d1EahKQ/formResponse",
+                    data: formData,
+                    type: "POST",
+                    dataType: "xml",
+                    statusCode: {
+                        0: function () {
+                            $(".end-message").slideDown();
+                            $(".submit-btn").fadeOut();
+                            //window.location.href = "thanks.html";
+                        },
+                        200: function () {
+                            $(".false-message").slideDown();
+                        }
+                    }
+                });
+                event.preventDefault();
+            });
+
+        });
+    </script>
+
+
+
+    <script>
+        $(function () {
+            // トップへ戻る
+            const pagetop = $('#page_top');
+            // ボタン非表示
+            pagetop.hide();
+
+            // 100px スクロールしたらボタン表示
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 1000) {
+                    pagetop.fadeIn(300);
+                } else {
+                    pagetop.fadeOut(300);
+                }
+            });
+            pagetop.click(function () {
+                $('body, html').animate({ scrollTop: 0 }, 300);
+                return false;
+            });
+        });
+    </script>
+
+    <!-- スライドショー -->
+    <script src="http://jaysalvat.github.io/vegas/releases/latest/vegas.js"></script>
+    <script>
+        $('#top').vegas({
+            overlay: true,
+            transition: 'flash',
+            transitionDuration: 500,
+            delay: 5000,
+            animation: 'random',
+            animationDuration: 20000,
+            slides: [
+                { src: 'img/top01.jpg' },
+                { src: 'img/top04.jpg' },
+                { src: 'img/top06.jpg' }
+            ]
+        });
+    </script>
+
+
+    <!-- スムーススクロール -->
+    <script>
+        // #から始まるURLがクリックされた時
+        jQuery('a[href^="#"]').click(function () {
+            // スムーススクロールの処理を書く
+        });
+    </script>
+
+    <script>
+        // #から始まるURLがクリックされた時
+        jQuery('a[href^="#"]').click(function () {
+            // 移動速度を指定（ミリ秒）
+            let speed = 300;
+            // hrefで指定されたidを取得
+            let id = jQuery(this).attr("href");
+            // idの値が#のみだったらターゲットをhtmlタグにしてトップへ戻るようにする
+            let target = jQuery("#" == id ? "html" : id);
+            // ページのトップを基準にターゲットの位置を取得
+            let position = jQuery(target).offset().top;
+            // ターゲットの位置までspeedの速度で移動
+            jQuery("html, body").animate(
+                {
+                    scrollTop: position
+                },
+                speed
+            );
+            return false;
+        });
+    </script>
+
+    <!-- wow利用宣言 -->
+    <script>
+        new WOW().init();
+    </script>
+
+    <!-- ドロワーメニューの利用宣言 -->
+    <!-- <script>
+        // 1「jQuery」に別名「$j」を付与 -->
+        <!-- var $j = jQuery.noConflict(true);
+        jQuery.noConflict();
+        (function ($) {
+
+            $(document).ready(function () {
+                $('.drawer').drawer();
+            });
+        })(jQuery); -->
     </script>
 </body>
+
+
+
 </html>
