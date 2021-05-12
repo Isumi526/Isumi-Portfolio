@@ -187,14 +187,44 @@ section {
   height: 20px;
 }
 
+.service, .works, .about {
+  background: url(https://images.unsplash.com/photo-1523878288860-7ad281611901?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80) center center/cover no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  z-index: -2;
+}
+
+.service::after, .works::after, .about::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #FFF;
+  opacity: .85;
+  z-index: -1;
+}
+
 /* ヘッダー */
 .header {
-  position: absolute;
   width: 100%;
   height: 100px;
-  top: 0px;
-  z-index: 100;
+  top: 0;
+  position: fixed;
   border-bottom: 1px solid #fff;
+  z-index: 100;
+}
+
+.header::after {
+  position: fixed;
+  top: 0;
+  content: "";
+  width: 100%;
+  height: 100px;
+  background: #222222;
+  opacity: .4;
+  z-index: 80;
 }
 
 .header_logo {
@@ -202,6 +232,7 @@ section {
   height: auto;
   margin: auto 0;
   line-height: 9;
+  z-index: 100;
 }
 
 @media screen and (max-width: 480px) {
@@ -226,6 +257,10 @@ section {
   line-height: 100px;
 }
 
+.header_nav {
+  z-index: 100;
+}
+
 @media screen and (min-width: 1024px) {
   .header_nav_list {
     display: -webkit-box;
@@ -236,7 +271,7 @@ section {
   .header_nav_list_item + .header_nav_list_item {
     margin-left: 60px;
   }
-  .header_nav_list a {
+  .header_nav_list_item a {
     color: #fff;
     letter-spacing: 0.015rem;
     -webkit-transition: all ease 0.3s;
@@ -247,7 +282,7 @@ section {
 }
 
 @media screen and (min-width: 1024px) and (min-width: 1024px) {
-  .header_nav_list a:hover::after {
+  .header_nav_list_item a:hover::after {
     content: "";
     display: block;
     position: absolute;
@@ -270,8 +305,9 @@ section {
 }
 
 .header .drawer-hamburger {
-  position: absolute;
+  position: fixed;
   padding: 35px 50px 0 0;
+  z-index: 100;
 }
 
 @media screen and (min-width: 481px) and (max-width: 1024px) {
@@ -291,7 +327,7 @@ section {
 }
 
 .drawer-open .drawer-hamburger {
-  position: fixed;
+  position: absolute;
   right: 0 !important;
 }
 
@@ -300,7 +336,9 @@ section {
 }
 
 .drawer-open .drawer-nav {
+  z-index: 50;
   height: 100vh;
+  width: 60vw;
   padding: 100px 18px 0 26px;
 }
 
@@ -310,6 +348,10 @@ section {
 
 .drawer-open .header_nav_list_item {
   height: 12vh;
+}
+
+.drawer-open .drawer-hamburger-icon, .drawer-open .drawer-hamburger-icon::before, .drawer-open .drawer-hamburger-icon::after {
+  z-index: 100;
 }
 
 #top {
@@ -379,6 +421,10 @@ section {
   }
 }
 
+.service {
+  padding-bottom: 0;
+}
+
 .service_message {
   text-align: center;
   font-size: 12px;
@@ -442,12 +488,13 @@ section {
 }
 
 .service_item_text {
-  line-height: 24px;
+  line-height: 1.5;
+  font-size: 14px;
   margin-top: 24px;
 }
 
 .works {
-  background: #fff;
+  z-index: 50;
 }
 
 @media screen and (min-width: 1024px) {
@@ -496,6 +543,79 @@ section {
     width: 100%;
     margin-top: 32px;
   }
+}
+
+.price {
+  background: url(https://cdn.pixabay.com/photo/2013/11/05/19/12/buildings-205986_1280.jpg) center center/cover no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  z-index: -10;
+}
+
+.price::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f0f0f0;
+  opacity: 0.45;
+  z-index: -1;
+}
+
+.price_table {
+  border-collapse: collapse;
+  border: 1px solid #707070;
+  font-weight: bold;
+  font-size: 18px;
+  width: 100%;
+}
+
+@media screen and (max-width: 480px) {
+  .price_table {
+    margin-top: 40px;
+    width: 100%;
+  }
+}
+
+.price_table_head, .price_table_body {
+  padding: 16px 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.price_table_head {
+  border: 1px solid #f7f7f7;
+  text-align: center;
+  color: #f7f7f7;
+  background: #222222;
+  width: 300px;
+}
+
+@media screen and (max-width: 480px) {
+  .price_table_head {
+    width: 120px;
+  }
+}
+
+.price_table_body {
+  background: #f0f0f0;
+  border: 1px solid #707070;
+  padding-left: 40px;
+  width: calc(100% - 300px);
+}
+
+@media screen and (max-width: 480px) {
+  .price_table_body {
+    width: calc(100% - 120 * 100%);
+    padding-left: 20px;
+  }
+}
+
+.price_attention {
+  z-index: 50;
+  margin-top: 12px;
+  font-size: 12px;
 }
 
 .about_message {
@@ -566,6 +686,7 @@ section {
 
 .contact {
   background: url(../img/contact-bg.jpg) center center/cover no-repeat;
+  background-attachment: fixed;
   position: relative;
   z-index: 1;
 }
